@@ -1,0 +1,39 @@
+<?php
+/**
+ * Application request factory
+ *
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+namespace Magento\Framework\App;
+
+/**
+ * Class \Magento\Framework\App\RequestFactory
+ *
+ */
+class RequestFactory
+{
+    /**
+     * @var \Magento\Framework\ObjectManagerInterface
+     */
+    protected $objectManager;
+
+    /**
+     * @param \Magento\Framework\ObjectManagerInterface $objectManager
+     */
+    public function __construct(\Magento\Framework\ObjectManagerInterface $objectManager)
+    {
+        $this->objectManager = $objectManager;
+    }
+
+    /**
+     * Create request
+     *
+     * @param array $arguments
+     * @return RequestInterface
+     */
+    public function create(array $arguments = [])
+    {
+        return $this->objectManager->create(\Magento\Framework\App\RequestInterface::class, $arguments);
+    }
+}
