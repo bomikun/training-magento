@@ -1,0 +1,7 @@
+<div class="page-heading">
+	<H1><?php echo __('Detail profil') ?><H1>
+</div>
+<div>
+	<h2>Nama: <?php echo $this->getEmployeeName($this->getRequest()->getParam('id')); ?></h2>
+</div>
+<button class="btn btn-default" onclick="window.location.href='/employee'">LIST EMPLOYEE</button>
