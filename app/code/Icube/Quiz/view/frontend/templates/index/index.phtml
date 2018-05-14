@@ -14,7 +14,7 @@
 	<tbody>
 		<?php foreach ($this->getEmployeeCollection() as $employees) : ?>
 		<tr>
-			<td><a href="<?php echo $this->getUrl("employee/detail/id/").$employees->getId(); ?>"><?php echo $employees->getName() ?></a></td>
+			<td><a href="<?php echo $this->getUrl("employee/detail/index/id/").$employees->getId(); ?>"><?php echo $employees->getName() ?></a></td>
 			<td><?php echo $employees->getDivision() ?></td>
 		</tr>
 		<?php endforeach; ?>
