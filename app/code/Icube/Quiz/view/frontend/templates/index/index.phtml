@@ -7,15 +7,15 @@
 			<td><button class="btn btn-default" onclick="window.location.href='/employee/add'">ADD EMPLOYEE</button></td>
 		</tr>
 		<tr>
-			<th><?php echo __('Name') ?></th>
-			<th><?php echo __('Division') ?></th>
+			<th><?php echo __('Name'); ?></th>
+			<th><?php echo __('Division'); ?></th>
 		</tr>
 	</thead>
 	<tbody>
 		<?php foreach ($this->getEmployeeCollection() as $employees) : ?>
 		<tr>
-			<td><a href="<?php echo $this->getUrl("employee/detail/index/id/").$employees->getId(); ?>"><?php echo $employees->getName() ?></a></td>
-			<td><?php echo $employees->getDivision() ?></td>
+			<td><a href="<?php echo $this->getUrl("employee/detail/index/id/").$employees->getId(); ?>"><?php echo $employees->getName(); ?></a></td>
+			<td><?php echo $employees->getDivision(); ?></td>
 		</tr>
 		<?php endforeach; ?>
 	</tbody>
