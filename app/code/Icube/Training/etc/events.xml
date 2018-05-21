@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+	<event name="icube_training_event_before">
+		<observer name="icube_training_observer_before" instance="Icube\Training\Observer\BeforeObserver" />
+	</event>
+
+	<event name="icube_training_event_after">
+		<observer name="icube_training_observer_after" instance="Icube\Training\Observer\AfterObserver" />
+	</event>
+
+	<event name="sales_order_place_after">
+		<observer name="icube_Order_Place_After" instance="Icube\Order\Observer\OrderPlaceAfter" />
+	</event>
+</config>

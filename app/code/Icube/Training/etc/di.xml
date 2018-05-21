@@ -3,4 +3,15 @@
 	<preference for="Icube\Training\Block\Hello" type="Icube\Training\Block\Override\Hello" />
 	<preference for="Magento\SendFriend\Model\SendFriend" type="Icube\Customization\Model\SendFriendHello" />
 	<preference for="Magento\Checkout\Controller\Cart\Add" type="Icube\Customization\Controller\Cart\Add" />
+	<type name="Magento\Framework\Console\CommandList">
+		<arguments>
+			<argument name="commands" xsi:type="array">
+				<item name="training_cli" xsi:type="object">Icube\Training\Console\Sayhello</item>
+			</argument>
+		</arguments>
+	</type>
+
+	<type name="Icube\Training\Helper\Data">
+		<plugin name="training_plugin_helper_data" type="Icube\Training\Plugin\Helper\Data" />
+	</type>
 </config>
