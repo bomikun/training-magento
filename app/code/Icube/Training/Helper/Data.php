@@ -9,4 +9,9 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
 	{
 		echo "This is Helper in Training Module";
 	}
+
+	public function getPluginHelper()
+	{
+		echo "You are AWESOME!";
+	}
 }

@@ -15,7 +15,7 @@ class InstallSchema implements InstallSchemaInterface
 		$table = $setup->getConnection()->newTable(
 			$setup->getTable('icube_trainee')
 		)->addColumn(
-			'entitiy_id',
+			'entity_id',
 			\Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
 			null,
 			['identity' => true, 'unsigned' => true, 'nullable' => false, 'primary' => true],
